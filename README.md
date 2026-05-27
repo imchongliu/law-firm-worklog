@@ -7,7 +7,7 @@
 ## 前置条件
 
 1. **Claude Code**（任意版本）
-2. **滴答清单 MCP** — 配置好 `dida365` MCP server，确保 `mcp__dida364__*` 工具在 Claude Code 中可用。参考：https://github.com/dida365/mcp-server
+2. **滴答清单 MCP** — 配置好 `dida365` MCP server，确保 `mcp__dida364__*` 工具在 Claude Code 中可用。参考：[(https://help.dida365.com/articles/7438132116019216384](https://help.dida365.com/articles/7438132116019216384)
 3. **Python + openpyxl**（仅 Excel 输出需要）：`pip install openpyxl`
 
 ## 安装
