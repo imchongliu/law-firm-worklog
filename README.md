@@ -13,11 +13,11 @@
 ## 安装
 
 ```bash
-# 将 .skill 文件放到 skills 目录
-cp law-firm-worklog.skill ~/.claude/skills/
+# 将 skill/ 目录下的内容复制到 Claude Code skills 目录
+cp -r skill/ ~/.claude/skills/law-firm-worklog/
 ```
 
-或直接在 Claude Code 中通过 Skill 管理界面安装。
+或通过 Claude Code Skill 管理界面导入。
 
 ## 使用
 
@@ -58,10 +58,25 @@ Skill 会检测到没有配置，引导你完成三组设置：
 | `.xlsx` | 默认 | 加粗灰底表头、细线边框、冻结首行、自动筛选 |
 | `.csv` | 说"导出 CSV" | UTF-8 BOM 编码，Excel/WPS 双击不乱码 |
 
-## 配置结构
+## 仓库结构
 
 ```
-law-firm-worklog/user-config/
+├── README.md
+├── LICENSE
+└── skill/
+    ├── SKILL.md
+    ├── scripts/
+    │   └── generate_worklog.py   # Excel 生成脚本
+    ├── references/
+    │   └── setup.md              # 首次配置脚本
+    └── evals/
+        └── evals.json
+```
+
+首次运行后自动生成 `user-config/`：
+
+```
+user-config/
 ├── profile.md      # 工作项目白名单 + 列分类表 + 固定值
 ├── template.xlsx   # 工时表头模板（或 .csv）
 └── projects.csv    # 项目案号注册表
